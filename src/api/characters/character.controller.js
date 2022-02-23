@@ -10,8 +10,18 @@ const getAllCharacters = async (req, res, next) => {
     }
 }
 
+const getAllCharactersById = async (req, res, next) => {
+    try {
+      const {id} = req.params;
+        const characterDB = await Character.findById(id)
+        res.status(200).json(characterDB)
+    } catch (error) {
+        return next(setError(500, 'Aillo failed server'))
+    }
+}
 module.exports = { 
 
-    getAllCharacters
+    getAllCharacters,
+    getAllCharactersById
 
 }
