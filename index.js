@@ -21,7 +21,7 @@ app.use((req, res, next) => {
 })
 
 app.use(cors({
-    origin: ['http://localhost:3000', 'http://localhost:4200','https://anillos-server-gby816zt7-juanisaacs.vercel.app/'],
+    origin: ['http://localhost:3000', 'http://localhost:4200','https://anillos-front.vercel.app'],
     credentials: true
 }))
 
