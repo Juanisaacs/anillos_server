@@ -1,5 +1,5 @@
 
-const Character = require('/character.models')
+const Character = require('./character.models')
 
 const getAllCharacters = async (req, res, next) => {
     try {

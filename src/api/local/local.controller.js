@@ -1,5 +1,5 @@
 
-const Local = require('/local.models')
+const Local = require('./local.models')
 
 const getAllLocals = async (req, res, next) => {
     try {

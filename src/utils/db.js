@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 // Guardamos en una variable la url de conexión
 const mongoDb = process.env.MONGO_DB;
 // Config de la función Connect que cuando sea llamada se conectará a la DB
-const connect = async () => {
+const connectDB = async () => {
     try {
         const db = await mongoose.connect(mongoDb, { useNewUrlParser: true, useUnifiedTopology: true });
         const { name, host } = db.connection;
@@ -18,4 +18,4 @@ const connect = async () => {
     }
 }
 // Exportamos la función para llamarla en el index.js
-module.exports = { connect };
+module.exports = { connectDB };
